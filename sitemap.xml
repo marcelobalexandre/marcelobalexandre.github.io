@@ -1,15 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://marcelobalexandre.github.io/robots.txt</loc>
+        <loc>http://marcelobalexandre.com.br/robots.txt</loc>
         <lastmod>2014-01-23T21:35:40-02:00</lastmod>
     </url>
     <url>
-        <loc>http://marcelobalexandre.github.io/blog/archives/</loc>
-        <lastmod>2014-01-23T21:35:40-02:00</lastmod>
+        <loc>http://marcelobalexandre.com.br/blog/archives/</loc>
+        <lastmod>2014-01-24T20:18:51-02:00</lastmod>
     </url>
     <url>
-        <loc>http://marcelobalexandre.github.io/</loc>
-        <lastmod>2014-01-23T21:35:40-02:00</lastmod>
+        <loc>http://marcelobalexandre.com.br/</loc>
+        <lastmod>2014-01-24T20:23:21-02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://marcelobalexandre.com.br/about/</loc>
+        <lastmod>2014-01-26T16:02:37-02:00</lastmod>
     </url>
 </urlset>
