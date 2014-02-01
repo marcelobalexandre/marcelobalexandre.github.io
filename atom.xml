@@ -4,7 +4,7 @@
   <title><![CDATA[Marcelo Alexandre]]></title>
   <link href="http://marcelobalexandre.com.br/atom.xml" rel="self"/>
   <link href="http://marcelobalexandre.com.br/"/>
-  <updated>2014-01-26T16:33:52-02:00</updated>
+  <updated>2014-02-01T15:04:19-02:00</updated>
   <id>http://marcelobalexandre.com.br/</id>
   <author>
     <name><![CDATA[Marcelo Alexandre]]></name>
@@ -12,5 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[But, Why? What Do I Have to Say?]]></title>
+    <link href="http://marcelobalexandre.com.br/blog/2014/02/01/but-why-what-do-i-have-to-say/"/>
+    <updated>2014-02-01T15:00:00-02:00</updated>
+    <id>http://marcelobalexandre.com.br/blog/2014/02/01/but-why-what-do-i-have-to-say</id>
+    <content type="html"><![CDATA[<p>Escrever um blog é algo que penso em fazer há algum tempo, mas sempre me preocupei em não ter algo para escrever ou não ter tempo para mantê-lo, e a ideia acabou sempre ficando em segundo plano.</p>
+
+<p>Mas essa ideia voltou a tomar forma ao ler o post <a href="http://chadfowler.com/blog/2014/01/21/on-having-something-to-say/"><em>On Having Something to Say</em></a> escrito por <a href="https://twitter.com/chadfowler">Chad Fowler</a> em seu blog. Nele, Chad Fowler comenta sobre seus receios ao ser convidado para falar/escrever sobre suas experiências como programador (como na primeira vez em que foi convidado para palestrar em um evento ou quando foi convidado a escrever um livro sobre Ruby On Rails). Ocasiões em que ele se perguntava, <em>“But, why? What do I have to say? I&rsquo;m still learning, after all”</em>.</p>
+
+<!--more-->
+
+
+<p>Mesmo com suas dúvidas ele não deixou de aproveitar essas oportunidades para aprender e aperfeiçoar-se. E foi justamente este ponto que me motivou a colocar a ideia do blog em prática e aproveitar essa “oportunidade” para aprender e me aperfeiçoar.</p>
+
+<p>Acredito que o compartilhamento de experiências (mesmo as experiências “erradas”) é uma ferramenta incrível para aprendermos coisas novas e/ou fixarmos o que já aprendemos. E como bônus podemos ajudar outras pessoas que estejam dispostas a aprender com nossas experiências.</p>
+
+<p>Apesar de gostar de ler (principalmente sobre tecnologia e outros assuntos <em>nerds</em>) sempre tive dificuldades para escrever, e essa é uma das <em>skills</em> que espero melhorar através desse blog. Pois como tudo na vida, é a prática que nos leva à excelência.</p>
+
+<p>Ainda não tenho muitas experiências profissionais como programador, mas espero poder compartilhar o que já sei e o que irei aprender através desse blog. Também não sei exatamente quais assuntos irei abordar ou com que frequência conseguirei atualiza-lo, mas gostaria que vocês aproveitassem o conteúdo que irei escrever e me dessem um <em>feedback</em> com suas opiniões.</p>
+
+<p>Obrigado a vocês que leram até aqui, espero que voltem mais vezes! :)</p>
+]]></content>
+  </entry>
   
 </feed>
