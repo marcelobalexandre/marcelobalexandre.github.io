@@ -4,10 +4,10 @@
 
 url: http://marcelobalexandre.com.br
 title: Marcelo Alexandre
-subtitle: Programador
+subtitle: Programmer
 author: Marcelo Alexandre
 simple_search: http://google.com/search
-description:
+description: Blog of Marcelo Alexandre
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -78,7 +78,7 @@ google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
+googleplus_user: 107368313309412247363
 googleplus_hidden: false
 
 # Pinboard
