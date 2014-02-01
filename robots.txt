@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://marcelobalexandre.com.br/sitemap.xml 
+Sitemap: http://marcelobalexandre.com/sitemap.xml 

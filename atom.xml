@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Marcelo Alexandre]]></title>
-  <link href="http://marcelobalexandre.com.br/atom.xml" rel="self"/>
-  <link href="http://marcelobalexandre.com.br/"/>
-  <updated>2014-02-01T15:04:19-02:00</updated>
-  <id>http://marcelobalexandre.com.br/</id>
+  <link href="http://marcelobalexandre.com/atom.xml" rel="self"/>
+  <link href="http://marcelobalexandre.com/"/>
+  <updated>2014-02-01T15:05:56-02:00</updated>
+  <id>http://marcelobalexandre.com/</id>
   <author>
     <name><![CDATA[Marcelo Alexandre]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[But, Why? What Do I Have to Say?]]></title>
-    <link href="http://marcelobalexandre.com.br/blog/2014/02/01/but-why-what-do-i-have-to-say/"/>
+    <link href="http://marcelobalexandre.com/blog/2014/02/01/but-why-what-do-i-have-to-say/"/>
     <updated>2014-02-01T15:00:00-02:00</updated>
-    <id>http://marcelobalexandre.com.br/blog/2014/02/01/but-why-what-do-i-have-to-say</id>
+    <id>http://marcelobalexandre.com/blog/2014/02/01/but-why-what-do-i-have-to-say</id>
     <content type="html"><![CDATA[<p>Escrever um blog é algo que penso em fazer há algum tempo, mas sempre me preocupei em não ter algo para escrever ou não ter tempo para mantê-lo, e a ideia acabou sempre ficando em segundo plano.</p>
 
 <p>Mas essa ideia voltou a tomar forma ao ler o post <a href="http://chadfowler.com/blog/2014/01/21/on-having-something-to-say/"><em>On Having Something to Say</em></a> escrito por <a href="https://twitter.com/chadfowler">Chad Fowler</a> em seu blog. Nele, Chad Fowler comenta sobre seus receios ao ser convidado para falar/escrever sobre suas experiências como programador (como na primeira vez em que foi convidado para palestrar em um evento ou quando foi convidado a escrever um livro sobre Ruby On Rails). Ocasiões em que ele se perguntava, <em>“But, why? What do I have to say? I&rsquo;m still learning, after all”</em>.</p>
