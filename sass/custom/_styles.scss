@@ -1,7 +1,7 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
-/* 
+/*
 -------------------------------------------------------------------------
 Author: Vladi Gleba (vladigleba.com)
 Date: October 2013
@@ -12,29 +12,31 @@ This layout is based on the following modular scale:
 62px @ 1:1.618
 
 See http://modularscale.com/scale/?px1=20&px2=62&ra1=1.618&ra2=0
-for the numbers in this scale. All font-size, line-height, margin, and 
+for the numbers in this scale. All font-size, line-height, margin, and
 padding values are derived from these numbers.
 
 See http://alistapart.com/article/more-meaningful-typography
 to learn about modular scales.
 
 -------------------------------------------------------------------------
-*/ 
+*/
 
 
 // ------------------------------
 // variables
 // ------------------------------
 
-$accent-color: #65a672; 
+$accent-color: #65a672;
 $accent-hover-color: darken($accent-color, 8%);
 
 $text-color: #333;
 $secondary-text-color: #aaa;
 
 $line-color: #e6e6e6;
-$border-radius-size: 4px;
 $hide-line-numbers: true;
+
+$border-radius-size: 4px;
+$border-style: 2px solid $secondary-text-color;
 
 
 // ------------------------------
@@ -62,8 +64,8 @@ $hide-line-numbers: true;
 }
 
 .font-size-large {
-  font-size: 28.405px;
-  font-size: 1.42rem;
+  font-size: 32.36px;
+  font-size: 1.618rem;
 }
 
 .font-size-largest {
@@ -71,7 +73,7 @@ $hide-line-numbers: true;
   font-size: 1.916rem;
 }
 
-.margin-bottom-large { 
+.margin-bottom-large {
   margin-bottom: 32.360px;
   margin-bottom: 1.618rem; 
 }
@@ -87,26 +89,30 @@ $hide-line-numbers: true;
 }
 
 .block-padding {
-  padding: 1px 20px;
-  padding: 1px 1rem;
+  padding: 1px 32.360px;
+  padding: 1px 1.618rem;
+}
+
+.border-style {
+  border-top: 2px solid $secondary-text-color;
 }
 
 .code-keywords {
-  background-color: #eee;
+  background-color: #e8e8e8;
   border-radius: $border-radius-size;
-  padding: 0 7.640px;
-  padding: 0 0.382rem;
+  padding: 0 5.591px;
+  padding: 0 0.28rem;
 }
 
 .button {
   @include transition(all 0.3s ease 0s);
   border-radius: $border-radius-size;
-  background-color: $accent-color; 
+  background-color: $accent-color;
   color: #fff;
   
   &:hover {
-    background-color: $accent-hover-color; 
-    color: #fff;         
+    background-color: $accent-hover-color;
+    color: #fff;
   }
 }
 
@@ -114,12 +120,16 @@ $hide-line-numbers: true;
   font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace;
 }
 
-.sans-serif-font-bold { 
-  font-family: "Fjalla One", "Helvetica Neue", Arial, sans-serif; 
+.sans-serif-font-bold {
+  font-family: "Fjalla One", "Helvetica Neue", Arial, sans-serif;
 }
 
-.sans-serif-font { 
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; 
+.sans-serif-font {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+.default-font {
+  font-family: "PT Serif", Georgia, Times, "Times New Roman", serif;
 }
 
 
@@ -127,18 +137,25 @@ $hide-line-numbers: true;
 // general styles
 // ------------------------------
 
-html { 
-  border-top: 10px solid $accent-color;
-  font: 125%/1 "PT Serif", Georgia, Times, "Times New Roman", serif; 
+html {
+  @extend .default-font;
+  border-top: 8px solid $accent-color;
+  font-size: 125%;
+  line-height: 1;
 }
 
-body { 
+body {
   -webkit-text-size-adjust: none; /* prevent mobile safari from resizing text */
   background-color: #fff;
   color: $text-color;
-  text-align: center; 
+  text-align: center;
   width: 54%;
-  margin: 0 auto; 
+  margin: 0 auto;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -146,19 +163,19 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
 }
 
-a { 
-  color: $accent-color; 
+a {
+  color: $accent-color;
   text-decoration: none;
   outline: none;
   @include transition(color 0.3s ease 0s);
   
   &:hover {
-    color: $accent-hover-color; 
+    color: $accent-hover-color;
   }
 }
 
-#main { 
-  clear: both; 
+#main {
+  clear: both;
 }
 
 aside,
@@ -173,11 +190,26 @@ section {
 
 blockquote {
   @extend .block-padding;
+  @extend .margin-bottom-large;
+  border-left: $border-style;
   font-style: italic;
+  
+  p {
+    margin: 0;
+  }
+  
+  footer {
+    @extend .default-font;
+    text-align: right;
+    
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
-cite, em, i, dfn { 
-  font-style: italic; 
+cite, em, i, dfn {
+  font-style: italic;
 }
 
 b, strong {
@@ -212,35 +244,38 @@ sub {
   bottom: -0.4rem;
 }
 
+img#portrait {
+  float: right;
+  border-radius: 125px;
+  margin-left: 20px;
+  margin-left: 1rem;
+  width: 240px;
+}
+
 
 // ------------------------------
 // code
 // ------------------------------
 
-code {
-  @extend .code-font;
-}
-
-figure.code {
+figure.code { 
   @extend .font-size-small;
-  @extend .margin-bottom-large;
   @extend .code-font;
   
-  figcaption {  
+  figcaption {
     margin: 4px 0 10px;
     line-height: 23.683px;
     line-height: 1.184rem;
     text-align: right;
     
-    a { 
-      margin-left: -3px; 
+    a {
+      margin-left: -3px;
       text-decoration: underline;
     }
-          
-    span, a { 
+    
+    span, a {
       @extend .code-keywords;
       display: inline-block;
-    
+      
       &:empty {
         display: none;
       }
@@ -254,12 +289,16 @@ figure.code {
 
 pre {
   @extend .block-padding;
+  @extend .font-size-small;
   @extend .code-font;
+  @extend .margin-bottom-large;
+  text-align: left;
+  line-height: 18px;
   
   &.line-numbers {
-    @if $hide-line-numbers == true { 
+    @if $hide-line-numbers == true {
       display: none;
-    }   
+    }
   }
 }
 
@@ -269,31 +308,32 @@ pre {
 // ------------------------------
 
 nav {
+  border-top: $border-style;
   overflow: auto;
-  border-top: 2px dotted $text-color;
   padding: 14.637px 0;
   padding: 0.732rem 0;
-  margin-bottom: 84.715px;
-  margin-bottom: 4.236rem;
+  margin-bottom: 100.316px;
+  margin-bottom: 5.016rem;
   
-  // ----- search form ----- 
+  // ----- search form -----
   
-  form { 
-    float: right; 
+  form {
+    float: right;
     
-    input.search { 
+    input.search {
       @extend .font-size-smallest;
       border: none;
       background-color: #f2f2f2;
       padding: 9.046px 14.637px;
       padding: 0.452rem 0.732rem;
       border-radius: $border-radius-size;
+      width: 180px;
     }
   }
   
   // ----- navigation links -----
   
-  ul { 
+  ul {
     float: left;
     margin-top: 9.03333px; /* not from scale */
     margin-top: 0.45rem; /* rounded */
@@ -303,13 +343,13 @@ nav {
     li {
       @extend .font-size-medium;
       @extend .sans-serif-font;
-      display: inline; 
+      display: inline;
       font-weight: bold;
     }
     
-    li + li { 
-      padding-left: 32.360px;
-      padding-left: 1.618rem;
+    li + li {
+      padding-left: 23.683px;
+      padding-left: 1.184rem;
     }
   }
 }
@@ -326,21 +366,21 @@ body {
   > header {
     margin: 84.715px 0 52.358px 0;
     margin: 4.236rem 0 2.618rem 0;
-  
-    h1 { 
+    
+    h1 {
       font-size: 62.000px;
       font-size: 3.1rem;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 7.640px;
       margin-bottom: 0.382rem;
-    
-      a, a:hover { 
-        color: $text-color; 
+      
+      a, a:hover {
+        color: $text-color;
       }
     }
-  
-    h2 { 
+    
+    h2 {
       @extend .font-size-large;
       @extend .sans-serif-font;
       color: $secondary-text-color;
@@ -348,7 +388,7 @@ body {
   }
   
   // ----- blog content -----
-
+  
   .blog-index > article {
     margin-bottom: 137.069px;
     margin-bottom: 6.853rem; /* for home page post preview */
@@ -360,15 +400,15 @@ body {
   
   // ----- pagination -----
   
-  .pagination { 
+  .pagination {
     @extend .sans-serif-font;
-    border-top: 2px dotted $text-color;
     padding: 23.683px 0;
     padding: 1.184rem 0;
     margin-bottom: 62px;
     margin-bottom: 3.1rem;
     margin-top: -84.715px;
     margin-top: -4.236rem;
+    border-top: $border-style;
     
     span, a {
       border-radius: $border-radius-size;
@@ -381,7 +421,7 @@ body {
     }
     
     span {
-      border: 1px solid $accent-color; 
+      border: 1px solid $accent-color;
       color: $accent-color;
     }
   }
@@ -395,11 +435,11 @@ body {
     p {
       @extend .font-size-smallest;
       @extend .sans-serif-font;
-      color: $secondary-text-color; 
+      color: $secondary-text-color;
       line-height: 20px;
       line-height: 1rem;
       
-      a { 
+      a {
         text-decoration: underline;
       }
     }
@@ -418,23 +458,26 @@ body {
   h2 {
     @extend .sans-serif-font-bold;
     color: $secondary-text-color;
-    font-size: 38.319px;
-    font-size: 1.916rem;
+    font-size: 50.22px;
+    font-size: 2.511rem; /* 2.618 - 0.107 */
   }
   
   article {
     @extend .margin-bottom-larger;
     
     h1 {
-      @extend .font-size-largest;
-      line-height: 38.319px;
-      line-height: 1.916rem;
+      font-size: 38.319px;
+      font-size: 1.916rem;
+      line-height: 44px;
+      line-height: 2.2rem;
+      padding-bottom: 4.722px;
+      padding-bottom: 0.236rem;
       margin: 0;
     }
   }
   
-  time, footer { 
-    @extend .font-size-small;
+  time, footer {
+    @extend .font-size-medium;
     @extend .sans-serif-font;
     color: $secondary-text-color;
     display: inline;
@@ -478,12 +521,12 @@ body {
 // blog post
 // ------------------------------
 
-article { 
+article {
   @extend .margin-bottom-largest;
-    
+  
   // ----- post's header -----
   
-  header {    
+  header {
     @extend .margin-bottom-large;
     
     h1 {
@@ -491,15 +534,15 @@ article {
       font-size: 2.298rem; /* 1.916 + 0.382 */
       margin-bottom: 3.456px;
       margin-bottom: 0.173rem;
-      line-height: 50.58px;
-      line-height: 2.534rem; /* 1.916 + 0.618 */
+      line-height: 52.96px;
+      line-height: 2.648rem; /* 1.916 + 0.732 */
       
       a, a:hover {
-        color: $text-color; 
+        color: $text-color;
       }
     }
     
-    p.meta { 
+    p.meta {
       @extend .font-size-medium;
       @extend .sans-serif-font;
       color: $secondary-text-color;
@@ -520,7 +563,7 @@ article {
   
   // ----- post's content -----
   
-  h1 { 
+  h1 {
     @extend .font-size-largest;
     margin-top: 62.000px;
     margin-top: 3.1rem;
@@ -529,17 +572,13 @@ article {
   }
   
   h2 {
-    @extend .font-size-large;
+    font-size: 30.56px;
+    font-size: 1.528rem; /* 1.618 - 0.09 */
+    text-transform: uppercase;
     margin-top: 52.358px;
     margin-top: 2.618rem;
     margin-bottom: 9.046px;
     margin-bottom: 0.452rem;
-  }
-    
-  .entry-content > pre {
-    @extend .font-size-smallest;
-    @extend .margin-bottom-large;
-    overflow: auto;
   }
   
   ul, ol {
@@ -549,6 +588,14 @@ article {
     text-align: left;
     margin-left: 20px;
     margin-left: 1rem;
+    
+    li:last-child p, ol:last-child p { 
+      margin-bottom: 0; 
+    }
+    
+    a {
+      text-decoration: underline;
+    }
   }
 
   ul {
@@ -563,16 +610,17 @@ article {
     @extend .default-line-height;
     @extend .margin-bottom-large;
     text-align: left;
-      
-    > code {
-      @extend .code-keywords;
-      font-size: 17.56px;
-      font-size: 0.878rem; /* 0.732 + 0.146 */
-    }
     
-    a { 
+    a {
       text-decoration: underline;
     }
+  }
+  
+  p > code, li code {
+    @extend .code-keywords;
+    @extend .code-font;
+    font-size: 17.56px;
+    font-size: 0.878rem; /* 0.732 + 0.146 */
   }
   
   // ----- post's footer -----
@@ -590,14 +638,14 @@ article {
       overflow: auto;
       padding-bottom: 38.319px;
       padding-bottom: 1.916rem;
-    
+      
       &:first-child {
         @extend .font-size-smallest;
         @extend .margin-bottom-large;
         padding-bottom: 14.637px;
         padding-bottom: 0.732rem;
-        border-bottom: 2px dotted $text-color;
-      
+        border-bottom: $border-style;
+        
         time:after, span.author:after {
           content: "•";
           padding: 0 6px 0 10px;
@@ -606,10 +654,10 @@ article {
       }
     }
     
-    a.basic-alignment { 
+    a.basic-alignment {
       text-decoration: none;
-      width: 45%; 
-      display: block; 
+      width: 45%;
+      display: block;
       line-height: 23.683px;
       line-height: 1.184rem;
       
@@ -623,17 +671,17 @@ article {
         text-align: right;
       }
     }
-    
-    // 'read on' button
-    
-    > a { 
-      @extend .button;
-      padding: 0.452rem 0;
-      padding: 9.046px 0;
-      display: block;
-      width: 30%;
-      margin: 0 auto;
-    }
+  }
+  
+  
+  // 'read on' button
+  > footer > a {
+    @extend .button;
+    padding: 0.452rem 0;
+    padding: 9.046px 0;
+    display: block;
+    width: 35%;
+    margin: 0 auto;
   }
 }
 
@@ -654,7 +702,7 @@ article {
   body {
     width: 90%;
   }
-}  
+}
 
 // ------------------------------
 
@@ -666,7 +714,7 @@ article {
   
   body {
     > header {
-      margin: 52.358px 0;
+      margin: 44.401px 0;
       margin: 2.618rem 0;
     }
   }
@@ -674,13 +722,13 @@ article {
   
   nav {
     border-top: none;
-    margin-bottom: 52.358px;
+    margin-bottom: 44.401px;
     margin-bottom: 2.618rem;
     
     ul {
       border-top: 2px solid #808080;
       border-bottom: 1px solid $line-color;
-      padding: 20px 0;
+      padding: 16.96px 0;
       padding: 1rem 0;
     }
     
@@ -690,22 +738,18 @@ article {
     }
     
     form {
-      margin-bottom: 23.683px;
+      margin-bottom: 20.08px;
       margin-bottom: 1.184rem;
       
-      input.search { 
-        padding-top: 9.046px;
-        padding-top: 0.452rem;
-        padding-bottom: 9.046px;
-        padding-bottom: 0.452rem;
-        font-size: 18.093px;
+      input.search {
+        font-size: 15.349px;
         font-size: 0.905em; /* 0.732 + 0.173 */
       }
     }
   }
   
   nav input.search,
-  article footer > a {
+  article > footer > a {
     width: 50%;
   }
 }
@@ -713,28 +757,27 @@ article {
 // ------------------------------
 
 @media screen and (max-width: 480px) {
-  body > header { 
-    margin: 38.319px 0;
-    margin: 1.916rem 0; 
+  body > header {
+    margin: 32.495px 0;
+    margin: 1.916rem 0;
     
-    h1 { 
-      font-size: 43.92px;
+    h1 {
+      font-size: 37.244px;
       font-size: 2.196rem; /* 1.916 + 0.236 */
     }
-  
-    h2 { 
-      font-size: 18.093px;
+    
+    h2 {
+      font-size: 15.349px;
       font-size: 0.905rem; /* 0.732 + 0.173 */
     }
   }
   
-  
   nav {
-    margin-bottom: 38.319px;
+    margin-bottom: 32.495px;
     margin-bottom: 1.916rem;
     
     ul {
-      padding: 14.637px 0;
+      padding: 12.415px 0;
       padding: 0.732rem 0;
       
       li {
@@ -742,57 +785,77 @@ article {
       }
       
       li + li {
-        padding-left: 9.046px;
+        padding-left: 7.66px;
         padding-left: 0.452rem;
       }
     }
     
     form {
-      margin-bottom: 20px;
+      margin-bottom: 16.96px;
       margin-bottom: 1rem;
     }
   }
   
   nav input.search,
-  article footer > a {
+  article > footer > a {
     width: 70%;
   }
   
-  #blog-archives article {
+  #blog-archives {
+    h2 {
+      font-size: 40.161px;
+      font-size: 2.368rem;
+    }
+    
+    article {
     margin-left: 0;
+    
+      h1 {
+        font-size: 27.441px;
+        font-size: 1.618rem;
+      }
+    }
   }
   
   .blog-index > article {
-    margin-bottom: 93.76px !important;
+    margin-bottom: 85.071px !important;
     margin-bottom: 5.016rem !important; /* 4.236 + 0.452 */
+  }
+  
+  img#portrait {
+    display: block;
+    float: none;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   article {
     header {
-      h1 { 
-        font-size: 38.319px;
-        font-size: 1.916rem; 
-        line-height: 43.92px;
+      h1 {
+        font-size: 32.495px;
+        font-size: 1.916rem;
+        line-height: 37.244px;
         line-height: 2.196rem; /* 1.916 + 0.28 */
       }
     }
     
-    footer > p.meta { 
-      font-size: 19.359px;
+    footer > p.meta {
+      font-size: 16.417px;
       font-size: 0.968rem; /* 0.732 + 0.236 */
     }
     
     .entry-content {
       h1 {
-        font-size: 31.32px;
+        font-size: 26.559px;
         font-size: 1.566rem; /* 1.184 + 0.382 */
-        line-height: 38.319px;
+        line-height: 32.495px;
         line-height: 1.916rem;
       }
-    
+      
       h2 {
-        font-size: 23.683px;
-        font-size: 1.184rem;
+        font-size: 23.015px;
+        font-size: 1.357rem; /* 1.184 + 0.173 */
       }
     }
   }
