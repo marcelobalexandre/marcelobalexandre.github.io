@@ -3,7 +3,7 @@ layout: post
 title: "Dicas sobre Integração Contínua com .NET e Jenkins"
 date: 2014-09-07 16:10:00 -0300
 comments: true
-categories: ci, .net, jenkins
+categories: CI .NET Jenkins
 ---
 
 No momento em que escrevo este post estou trabalhando em uma aplicação _desktop_ para Windows desenvolvida na plataforma .NET. Com a primeira versão que será entregue para os usuários finais quase pronta, nossa equipe sentiu necessidade de colocar em prática o processo de Integração Contínua. Para atingir tal objetivo precisaríamos configurar uma ferramenta que nos auxiliasse a automatizar esse processo, e para isso escolhemos um servidor de Integração Contínua chamado <a href="http://jenkins-ci.org/" target="_blank">Jenkins</a>.
