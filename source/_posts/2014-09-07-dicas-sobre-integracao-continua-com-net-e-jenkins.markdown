@@ -3,7 +3,9 @@ layout: post
 title: "Dicas sobre Integração Contínua com .NET e Jenkins"
 date: 2014-09-07 16:10:00 -0300
 comments: true
-categories: CI .NET Jenkins
+categories: [ci, .net, jenkins]
+keywords: integracao continua, jenkins, .net, ci, continuous integration, dicas
+description: Veja algumas dicas sobre Integração Contínua para .NET utilizando o Jenkins.
 ---
 
 No momento em que escrevo este post estou trabalhando em uma aplicação _desktop_ para Windows desenvolvida na plataforma .NET. Com a primeira versão que será entregue para os usuários finais quase pronta, nossa equipe sentiu necessidade de colocar em prática o processo de Integração Contínua. Para atingir tal objetivo precisaríamos configurar uma ferramenta que nos auxiliasse a automatizar esse processo, e para isso escolhemos um servidor de Integração Contínua chamado <a href="http://jenkins-ci.org/" target="_blank">Jenkins</a>.
@@ -12,9 +14,9 @@ Não tenho a intenção de me aprofundar muito nos processos relacionados a Inte
 
 <!--more-->
 
-#WTF is Continous Integration?
+#WTF is Continuous Integration?
 
-Basicamente, Integração Contínua ou _Continous Integration_ (CI) é uma prática de desenvolvimento de software considerada por muitos um dos pilares das metodologias ágeis. Ela permite que a equipe encontre e elimine problemas rapidamente, agilizando os processos de _build_ e _delivery_, melhorando as respostas à falhas e aumentando a qualidade do software.
+Basicamente, Integração Contínua ou Continuous Integration_ (CI) é uma prática de desenvolvimento de software considerada por muitos um dos pilares das metodologias ágeis. Ela permite que a equipe encontre e elimine problemas rapidamente, agilizando os processos de _build_ e _delivery_, melhorando as respostas à falhas e aumentando a qualidade do software.
 
 De maneira simplificada, um processo de integração continua deve monitorar as mudanças de código no seu repositório de controle de versão e realizar os passos necessários para gerar um executável entregável para o cliente. O que normalmente consiste em compilar a aplicação em modo _Release_, rodar os testes e gerar o executável.
 
