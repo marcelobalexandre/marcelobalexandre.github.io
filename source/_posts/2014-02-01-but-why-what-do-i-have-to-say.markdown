@@ -3,7 +3,9 @@ layout: post
 title: "But, why? What do I have to say?"
 date: 2014-02-01 15:00:00 -0200
 comments: true
-categories: 
+categories:
+keywords: blog, primeiro post, motivacao
+description: Meu primeiro post onde explico minha motivação de escrever um blog.
 ---
 
 Escrever um blog é algo que penso em fazer há algum tempo, mas sempre me preocupei em não ter algo para escrever ou não ter tempo para mantê-lo, e a ideia acabou sempre ficando em segundo plano.

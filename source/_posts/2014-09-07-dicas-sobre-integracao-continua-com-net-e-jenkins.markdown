@@ -3,7 +3,7 @@ layout: post
 title: "Dicas sobre Integração Contínua com .NET e Jenkins"
 date: 2014-09-07 16:10:00 -0300
 comments: true
-categories: [ci, .net, jenkins]
+categories: [integracao continua, ci, .net, jenkins, dicas]
 keywords: integracao continua, jenkins, .net, ci, continuous integration, dicas
 description: Veja algumas dicas sobre Integração Contínua para .NET utilizando o Jenkins.
 ---

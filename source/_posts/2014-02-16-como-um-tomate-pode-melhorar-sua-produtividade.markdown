@@ -3,7 +3,9 @@ layout: post
 title: "Como um tomate pode melhorar sua produtividade?"
 date: 2014-02-16 23:45:00 -0300
 comments: true
-categories: Produtividade Pomodoro
+categories: [pomodoro, produtividade, dicas]
+keywords: pomodoro, produtividade, dicas
+description: Entenda sobre como a técnica Pomodoro pode melhorar sua produtividade.
 ---
 
 Como programador algumas das minhas preocupações estão relacionadas a produtividade e a eficiência. Em certos momentos eu me pergunto: _como posso fazer mais em menos tempo e com a melhor qualidade possível?_ Em busca de uma resposta para essa pergunta me deparei com uma técnica que venho tentando aplicar no meu dia a dia, e gostaria de compartilhar minhas opiniões sobre ela com vocês.
