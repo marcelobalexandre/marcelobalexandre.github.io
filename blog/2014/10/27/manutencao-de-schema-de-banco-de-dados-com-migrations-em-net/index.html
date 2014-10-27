@@ -9,8 +9,8 @@
   <meta name="author" content="Marcelo Alexandre">
 
   
-  <meta name="description" content="Veja algumas dicas sobre Integração Contínua para .NET utilizando o Jenkins.">
-  <meta name="keywords" content="integracao continua, jenkins, .net, ci, continuous integration, dicas">
+  <meta name="description" content="Veja como utilizar migrations em .NET com FluentMigrator.">
+  <meta name="keywords" content="migration, fluentmigrator, .net, integracao continua, ci, continuous integration, dicas">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net">
+  <link rel="canonical" href="http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Marcelo Alexandre" type="application/atom+xml">
@@ -90,7 +90,7 @@
 
 
 
-<time class='entry-date' datetime='2014-10-26T19:55:00-02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
+<time class='entry-date' datetime='2014-10-27T19:55:00-02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://www.marcelobalexandre.com">Comments</a>
@@ -469,12 +469,12 @@
 
 
 
-<time class='entry-date' datetime='2014-10-26T19:55:00-02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
+<time class='entry-date' datetime='2014-10-27T19:55:00-02:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>7:55 pm</span></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dot-net/'>.net</a>, <a class='category' href='/blog/categories/ci/'>ci</a>, <a class='category' href='/blog/categories/dicas/'>dicas</a>, <a class='category' href='/blog/categories/integracao-continua/'>integracao continua</a>, <a class='category' href='/blog/categories/jenkins/'>jenkins</a>
+    <a class='category' href='/blog/categories/dot-net/'>.net</a>, <a class='category' href='/blog/categories/dicas/'>dicas</a>, <a class='category' href='/blog/categories/migration/'>migration</a>
   
 </span>
 
@@ -483,7 +483,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/" data-via="" data-counturl="http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/" data-via="" data-counturl="http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -518,7 +518,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/">Manutenção De Schema De Banco De Dados Com Migrations Em .NET</a>
+        <a href="/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/">Manutenção De Schema De Banco De Dados Com Migrations Em .NET</a>
       </li>
     
       <li class="post">
@@ -568,8 +568,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/';
-        var disqus_url = 'http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/';
+        var disqus_identifier = 'http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/';
+        var disqus_url = 'http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/';
         var disqus_script = 'embed.js';
       
     (function () {

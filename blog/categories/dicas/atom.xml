@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Dicas | Marcelo Alexandre]]></title>
   <link href="http://www.marcelobalexandre.com/blog/categories/dicas/atom.xml" rel="self"/>
   <link href="http://www.marcelobalexandre.com/"/>
-  <updated>2014-10-27T19:51:32-02:00</updated>
+  <updated>2014-10-27T19:56:45-02:00</updated>
   <id>http://www.marcelobalexandre.com/</id>
   <author>
     <name><![CDATA[Marcelo Alexandre]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Manutenção De Schema De Banco De Dados Com Migrations Em .NET]]></title>
-    <link href="http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/"/>
-    <updated>2014-10-26T19:55:00-02:00</updated>
-    <id>http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net</id>
+    <link href="http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/"/>
+    <updated>2014-10-27T19:55:00-02:00</updated>
+    <id>http://www.marcelobalexandre.com/blog/2014/10/27/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net</id>
     <content type="html"><![CDATA[<p>A manutenção de schema de banco de dados é algo importante e delicado em qualquer projeto de desenvolvimento de software. Quando o assunto é banco de dados, todos os desenvolvedores do time precisam estar na mesma página para que possamos realizar mudanças rápidas e com o mínimo de propensão a falhas possível. Com o intuito de atingirmos esses objetivos é importante que o schema do banco de dados esteja protegido pelo nosso controle de versão, e que de preferência, faça parte do processo de Integração Contínua do projeto.</p>
 
 <p>Normalmente o processo de atualização e manutenção de schema de banco de dados é realizado de maneira manual através da criação de scripts SQL e/ou utilização de softwares que geram estes scripts a partir da comparação de dois bancos de dados. Apesar deste processo funcionar em muitos projetos existentes, ele exige muita intervenção manual, o que pode acabar atrasando o lançamento de uma nova versão do sistema e prejudicando os processos de Integração Contínua do projeto.</p>
