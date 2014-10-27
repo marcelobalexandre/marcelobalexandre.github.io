@@ -3,6 +3,14 @@
   
   
   <url>
+    <loc>http://www.marcelobalexandre.com/blog/2014/10/26/manutencao-de-schema-de-banco-de-dados-com-migrations-em-net/</loc>
+    
+    <lastmod>2014-10-26T19:55:00-02:00</lastmod>
+    
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://www.marcelobalexandre.com/blog/2014/09/07/dicas-sobre-integracao-continua-com-net-e-jenkins/</loc>
     
     <lastmod>2014-09-07T16:10:00-03:00</lastmod>
@@ -29,21 +37,21 @@
   
   <url>
     <loc>http://www.marcelobalexandre.com/</loc>
-    <lastmod>2014-09-09T22:05:08-03:00</lastmod>
+    <lastmod>2014-10-27T19:51:32-02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://www.marcelobalexandre.com/blog/archives/</loc>
-    <lastmod>2014-09-09T22:05:08-03:00</lastmod>
+    <lastmod>2014-10-27T19:51:32-02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://www.marcelobalexandre.com/about/</loc>
-    <lastmod>2014-09-09T22:05:08-03:00</lastmod>
+    <lastmod>2014-10-27T19:51:32-02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
