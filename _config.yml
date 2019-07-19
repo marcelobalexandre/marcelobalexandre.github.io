@@ -41,14 +41,20 @@ defaults:
       locale: pt-BR
       permalink: /blog/pt-BR/:title
 
+pagination:
+  enabled: true
+  per_page: 2
+  locale: en
+
 root_path:
   en: '/'
   pt-BR: '/pt-BR'
-header_pages:
+
+header_links:
   en:
-    - pages/en/posts.md
+    - /blog/index.html
   pt-BR:
-    - pages/pt-BR/posts.md
+    - /pt-BR/blog/index.html
 
 # Build settings
 markdown: kramdown
