@@ -50,6 +50,10 @@ root_path:
   en: '/'
   pt-BR: '/pt-BR'
 
+search_path:
+  en: '/blog/search'
+  pt-BR: '/pt-BR/blog/pesquisar'
+
 header_links:
   en:
     - /blog/index.html
