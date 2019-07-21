@@ -2,6 +2,8 @@
 layout: post
 title:  "Two"
 date:   2019-07-15 17:45:25 -0300
+categories: [category_two]
+tags: [tag_two]
 ---
 
 Two

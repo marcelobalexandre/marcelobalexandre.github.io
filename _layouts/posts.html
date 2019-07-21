@@ -9,6 +9,30 @@ layout: default
 
   {{ content }}
 
+  <h2>Categories</h2>
+
+  {%- assign categories_by_locale = site.categories_by_locale[page.locale] -%}
+  {% for category in categories_by_locale %}
+    <h3>{{ category }}</h3>
+    <ul>
+      {% for post in site.categories[category] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+  <h2>Tags</h2>
+
+  {%- assign tags_by_locale = site.tags_by_locale[page.locale] -%}
+  {% for tag in tags_by_locale %}
+    <h3>{{ tag }}</h3>
+    <ul>
+      {% for post in site.tags[tag] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
   {%- assign posts = site.posts | where: 'locale', page.locale -%}
   {%- if paginator.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>

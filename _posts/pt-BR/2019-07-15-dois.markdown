@@ -2,6 +2,8 @@
 layout: post
 title:  "Dois"
 date:   2019-07-15 17:45:25 -0300
+categories: [categoria_dois]
+tags: [tag_dois]
 ---
 
 Dois

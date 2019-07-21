@@ -56,6 +56,22 @@ header_links:
   pt-BR:
     - /pt-BR/blog/index.html
 
+categories_by_locale:
+  en:
+    - category_one
+    - category_two
+  pt-BR:
+    - categoria_um
+    - categoria_dois
+
+tags_by_locale:
+  en:
+    - tag_one
+    - tag_two
+  pt-BR:
+    - tag_um
+    - tag_dois
+
 # Build settings
 markdown: kramdown
 theme: minima
