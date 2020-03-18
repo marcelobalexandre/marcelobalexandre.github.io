@@ -1,6 +1,8 @@
 ---
 layout: default
 locale: en
+header_id: home
+title: Home
 permalink: /
 ---
 

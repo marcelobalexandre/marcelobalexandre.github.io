@@ -1,0 +1,148 @@
+@import 'neat';
+@import 'colors';
+
+$blog-grid: (
+  gutter: 60px
+);
+
+.blog {
+  @include grid-container;
+  margin-left: -60px;
+  margin-right: -60px;
+
+  .posts {
+    @include grid-column(8, $blog-grid);
+
+    h2 {
+      a {
+        color: $primary-text-color;
+        text-decoration: none;
+
+        &:visited {
+          color: $primary-text-color;
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    article {
+      background-color: white;
+      margin-top: 60px;
+      padding: 50px;
+      -webkit-box-shadow: 0 10px 30px rgba(0,0,0,.05);
+      -moz-box-shadow: 0 10px 30px rgba(0,0,0,.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,.05);
+
+      h2 {
+        font-size: 35px;
+        margin: 0px;
+        padding: 0px;
+        line-height: 1;
+      }
+
+      span.date {
+        color: $secondary-text-color;
+      }
+
+      p {
+        margin-top: 15px;
+      }
+    }
+
+    div.pagination-container {
+      margin-top: 60px;
+
+      .navigation-button {
+        @extend .secondary-button;
+
+        display: flex;
+      }
+
+      .back-button {
+        float: left;
+
+        i {
+          margin-right: 6px;
+        }
+      }
+
+      .next-button {
+        float: right;
+
+        i {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    @include grid-column(4, $blog-grid);
+    margin-top: 60px;
+
+    .search-form {
+      display: flex;
+      border: 2px solid $input-border-color;
+      border-radius: 2px;
+      color: $input-text-color;
+
+      &:focus-within {
+        border-color: $input-focus-border-color;
+      }
+
+      input {
+        border: 0px;
+        outline: none;
+        width: 100%;
+        padding: 15px 18px;
+        font-size: 19px;
+        line-height: 1.4;
+
+        &::placeholder {
+          color: $input-focus-border-color;
+        }
+      }
+
+      button {
+        background-color: white;
+        border: 0px;
+        outline: none;
+        padding: 15px 18px;
+        font-size: 19px;
+        line-height: 1.4;
+
+        &:hover {
+          background-color: $input-border-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 60px;
+    }
+
+    ul {
+      margin-left: 20px;
+
+      li {
+        margin-top: 8px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+
+      a {
+        color: $primary-text-color;
+        font-size: 17px;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import 'colors';
+
+.button {
+  display: inline-block;
+
+  padding: 12px 20px 12px 20px;
+  border: 2px solid;
+  border-radius: 21px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.primary-button {
+  @extend .button;
+
+  background: $primary-button-color;
+  border-color: $primary-button-color;
+  color: $primary-button-text-color;
+
+  &:visited {
+    color: $primary-button-text-color;
+  }
+
+  &:hover {
+    background: $primary-button-hover-color;
+    border-color: $primary-button-hover-color;
+  }
+}
+
+.secondary-button {
+  @extend .button;
+
+  background: 0 0;
+  border-color: $secondary-button-color;
+  color: $secondary-button-color;
+
+  &:visited {
+    color: $secondary-button-color;
+  }
+
+  &:hover {
+    border-color: $secondary-button-hover-color;
+    color: $secondary-button-hover-color;
+  }
+}

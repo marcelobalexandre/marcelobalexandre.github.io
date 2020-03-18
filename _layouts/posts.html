@@ -2,77 +2,83 @@
 layout: default
 ---
 
-<div class="posts">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<div class="blog">
+  <div class="posts">
+    {%- assign posts = site.posts | where: 'locale', page.locale -%}
+    {%- for post in paginator.posts -%}
+    <article>
+      <h2>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </h2>
 
-  {{ content }}
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <span class="date">
+        {{ post.date | date: date_format }}
+      </span>
 
-  <h2>Categories</h2>
+      {{ post.excerpt }}
 
-  {%- assign categories_by_locale = site.categories_by_locale[page.locale] -%}
-  {% for category in categories_by_locale %}
-    <h3>{{ category }}</h3>
-    <ul>
-      {% for post in site.categories[category] %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-
-  <h2>Tags</h2>
-
-  {%- assign tags_by_locale = site.tags_by_locale[page.locale] -%}
-  {% for tag in tags_by_locale %}
-    <h3>{{ tag }}</h3>
-    <ul>
-      {% for post in site.tags[tag] %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endfor %}
-
-  {%- assign posts = site.posts | where: 'locale', page.locale -%}
-  {%- if paginator.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in paginator.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+      <a href="{{ post.url | relative_url }}" class="primary-button">
+        Read more
+      </a>
+    </article>
+    {%- endfor -%}
 
     {% if paginator.total_pages > 1 %}
-      <ul>
+      <div class="pagination-container">
         {% if paginator.previous_page %}
-        <li>
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-        </li>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="navigation-button back-button">
+            <i class="fas fa-arrow-left"></i> Newer Posts
+          </a>
         {% endif %}
+
         {% if paginator.next_page %}
-        <li>
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-        </li>
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="navigation-button next-button">
+            <span>Older Posts</span> <i class="fas fa-arrow-right"></i>
+          </a>
         {% endif %}
-      </ul>
+      </div>
     {% endif %}
+  </div>
 
-    <p class="feed-subscribe">
-      <a href="{{ 'feed.xml' | relative_url }}">
-        <svg class="svg-icon orange"><use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg><span>Subscribe</span>
-      </a>
+  <div class="sidebar">
+    <h1>Blog</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum nibh ac ornare tincidunt. Donec vitae lorem elit. Fusce enim.
     </p>
-  {%- endif -%}
 
+    <form action="{{ site.search_path[page.locale] }}" method="get" class="search-form">
+      <input id="search" name="query" type="text" placeholder="Search" />
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+
+    <h3>Categories</h3>
+
+    {%- assign categories_by_locale = site.categories_by_locale[page.locale] -%}
+    <ul>
+      {% for category in categories_by_locale %}
+        <li>
+          <a href="{{site.baseurl}}/categories/{{ category | slugize }}">
+            {{ category }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <h3>Tags</h3>
+
+    {%- assign tags_by_locale = site.tags_by_locale[page.locale] -%}
+    <ul>
+      {% for tag in tags_by_locale %}
+        <li>
+          <a href="{{site.baseurl}}/tags/{{ tag | slugize }}">
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>

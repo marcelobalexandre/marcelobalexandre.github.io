@@ -1,0 +1,29 @@
+@import 'neat';
+
+.site-footer {
+  border: none;
+
+  .wrapper {
+    @include grid-container;
+
+    .header-container {
+      @include grid-column(6);
+    }
+
+    .social-links-container {
+      @include grid-column(6);
+
+      ul {
+        float: right;
+
+        li {
+          display: inline;
+
+          .username {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

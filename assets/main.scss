@@ -1,0 +1,23 @@
+---
+# Required by front matter.
+---
+
+$content-width: 1280px !default;
+
+@import 'minima';
+@import 'neat';
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/solid';
+@import 'typography';
+@import 'colors';
+@import 'buttons';
+@import 'header';
+@import 'footer';
+@import 'blog';
+
+
+
+.page-content {
+  background: $background-color;
+  padding-top: 0px;
+}

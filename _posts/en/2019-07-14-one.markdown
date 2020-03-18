@@ -1,11 +1,10 @@
 ---
 layout: post
-title:  "One"
-date:   2019-07-14 17:45:25 -0300
+header_id: blog
+title: "One"
+date: 2019-07-14 17:45:25 -0300
 categories: [category_one]
 tags: [tag_one]
 ---
 
-One
-
-Word
+This first post is about something.

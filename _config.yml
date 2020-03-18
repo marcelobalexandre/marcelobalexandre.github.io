@@ -24,6 +24,7 @@ url: '' # the base hostname & protocol for your site, e.g. http://example.com
 default_locale: en
 github_username: marcelobalexandre
 twitter_username: marcelobalex
+instagram_username: marcelobalexandre
 
 defaults:
   -
@@ -56,8 +57,10 @@ search_path:
 
 header_links:
   en:
+    - /
     - /blog/index.html
   pt-BR:
+    - /pt-BR/index.html
     - /pt-BR/blog/index.html
 
 categories_by_locale:

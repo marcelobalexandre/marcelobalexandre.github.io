@@ -1,6 +1,7 @@
 ---
 layout: search
 locale: pt-BR
+header_id: blog
 title: Pesquisar
 permalink: /pt-BR/blog/pesquisar
 ---

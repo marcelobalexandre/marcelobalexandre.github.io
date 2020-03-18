@@ -1,6 +1,8 @@
 ---
 layout: default
 locale: pt-BR
+header_id: home
+title: Home
 permalink: /pt-BR/
 header_pages:
   - pages/pt-BR/posts.md

@@ -14,11 +14,16 @@
           </span>
         </label>
 
+
         <div class="trigger">
           {%- for link in links -%}
             {%- assign link_page = site.pages | where: "url", link | first -%}
             {%- if link_page.title -%}
-              <a class="page-link" href="{{ link_page.url | relative_url }}">{{ link_page.title | escape }}</a>
+              {%- assign current = nil -%}
+              {% if page.header_id == link_page.header_id %}
+                {% assign current = 'current' %}
+              {% endif %}
+              <a class="page-link {{ current }}" href="{{ link_page.url | relative_url }}">{{ link_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>

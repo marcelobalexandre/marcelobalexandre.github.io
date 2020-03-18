@@ -1,0 +1,28 @@
+@import 'colors';
+
+.site-header {
+  border: none;
+  padding: 25px;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .site-title {
+    font-weight: bold;
+  }
+
+  .page-link {
+    padding-bottom: 2px;
+    font-weight: 500;
+    color: $primary-text-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .current {
+    border-bottom: 2px solid $primary-color;
+  }
+}
