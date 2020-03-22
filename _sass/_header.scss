@@ -9,7 +9,12 @@
   }
 
   .site-title {
+    color: $primary-text-color;
     font-weight: bold;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .page-link {
@@ -18,7 +23,7 @@
     color: $primary-text-color;
 
     &:hover {
-      color: $primary-color;
+      opacity: 0.8;
     }
   }
 

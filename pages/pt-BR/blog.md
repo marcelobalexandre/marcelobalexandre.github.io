@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: blog
 locale: pt-BR
 header_id: blog
 title: Blog

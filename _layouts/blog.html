@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="blog">
+  <div class="posts">
+    {%- assign posts = site.posts | where: 'locale', page.locale -%}
+    {%- for post in paginator.posts -%}
+      <article>
+        <a href="{{ post.url | relative_url }}">
+          {% if post.image %}
+            <div class="image" style="background-image: url({{ post.image }});"></div>
+          {% endif %}
+
+          <div class="detail">
+            <h2>{{ post.title | escape }}</h2>
+
+            {{ post.excerpt }}
+
+            <span class="date">
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              {{ post.date | date: date_format }}
+            </span>
+
+          </div>
+        </a>
+      </article>
+    {%- endfor -%}
+
+    {% if paginator.total_pages > 1 %}
+      <div class="pagination-container">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="navigation-button back-button">
+            <i class="fas fa-arrow-left"></i> Newer Posts
+          </a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="navigation-button next-button">
+            <span>Older Posts</span> <i class="fas fa-arrow-right"></i>
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

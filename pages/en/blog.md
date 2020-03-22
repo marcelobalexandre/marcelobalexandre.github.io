@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: blog
 locale: en
 header_id: blog
 title: Blog

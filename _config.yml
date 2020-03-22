@@ -44,7 +44,7 @@ defaults:
 
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 5
   locale: en
 
 root_path:
