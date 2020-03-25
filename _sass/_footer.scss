@@ -22,30 +22,6 @@
 
     .social-links-container {
       @include grid-column(6);
-
-      ul {
-        float: right;
-
-        li {
-          display: inline;
-
-          .username {
-            display: none;
-          }
-
-          a {
-            &:hover {
-              opacity: 0.8;
-            }
-
-            svg {
-              fill: $primary-text-color;
-            }
-
-          }
-
-        }
-      }
     }
   }
 }

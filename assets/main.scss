@@ -13,10 +13,10 @@ $content-width: 1280px !default;
 @import 'buttons';
 @import 'header';
 @import 'footer';
+@import 'social';
+@import 'home';
 @import 'blog';
 @import 'featured';
-
-
 
 .page-content {
   background: $background-color;

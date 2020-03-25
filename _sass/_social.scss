@@ -1,0 +1,23 @@
+@import 'colors';
+
+ul.social-media-list {
+  float: right;
+
+  li {
+    display: inline;
+
+    .username {
+      display: none;
+    }
+
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+
+      svg {
+        fill: $primary-text-color;
+      }
+    }
+  }
+}
