@@ -1,0 +1,62 @@
+.posts {
+  article {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    opacity: 1;
+    transition: background-color 250ms ease, color 250ms ease;
+
+    &:hover {
+      background: $secondary-background-color;
+    }
+
+    a {
+      color: $default-text-color;
+      fill: $default-text-color;
+      padding: 0px;
+      text-decoration: none;
+
+      div.image {
+        margin-left: 0px;
+        background-color: #FAFAFA;
+        background-origin: border-box;
+        background-size: cover;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 0.5rem;
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+          inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+          inset 0 -1px 0 0 rgba(255, 255, 255, 0.1),
+          0 1px 3px rgba(0, 0, 0, 0.05),
+          0 1px 2px rgba(0, 0, 0, 0.1);
+        height: 320px;
+        overflow: hidden;
+      }
+
+      div.detail {
+        font-size: 1em;
+
+        h2 {
+          margin-bottom: 0em;
+          font-size: 1.5em;
+          font-weight: bold;
+          line-height: 1.2em;
+        }
+
+        p {
+          font-family: 'Open Sans', 'Noto Sans', 'Roboto', 'Droid Sans', sans-serif;
+          font-size: 1em;
+          font-weight: normal;
+          line-height: 1.2em;
+          opacity: 0.5;
+        }
+
+        span.date {
+          font-family: 'Open Sans', 'Noto Sans', 'Roboto', 'Droid Sans', sans-serif;
+          font-size: 0.9em;
+          line-height: 1em;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

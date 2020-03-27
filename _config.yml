@@ -55,6 +55,9 @@ search_path:
   en: '/blog/search'
   pt-BR: '/pt-BR/blog/pesquisar'
 
+blog_path:
+  en: '/blog'
+
 header_links:
   en:
     - /

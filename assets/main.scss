@@ -12,11 +12,11 @@ $content-width: 1280px !default;
 @import 'colors';
 @import 'buttons';
 @import 'header';
-@import 'footer';
-@import 'social';
 @import 'home';
 @import 'blog';
-@import 'featured';
+@import 'posts';
+@import 'social';
+@import 'footer';
 
 .page-content {
   background: $background-color;
