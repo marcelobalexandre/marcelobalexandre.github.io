@@ -15,7 +15,9 @@ layout: default
           <div class="detail">
             <h2>{{ post.title | escape }}</h2>
 
-            {{ post.excerpt }}
+            <p>
+              {{ post.description }}
+            </p>
 
             <span class="date">
               {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

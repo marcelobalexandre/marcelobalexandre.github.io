@@ -5,6 +5,7 @@ div.home {
   section.about {
     display: flex;
     width: fit-content;
+    width: -moz-fit-content;
     margin: 4em auto 6em auto;
     align-items: center;
 

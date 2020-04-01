@@ -1,0 +1,61 @@
+article.post {
+  header {
+    h1 {
+      font-weight: bold;
+      font-size: 1.9rem;
+      line-height: 1.2rem;
+    }
+
+    h2 {
+      font-family: 'Open Sans', 'Noto Sans', 'Roboto', 'Droid Sans', sans-serif;
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 1.2rem;
+      opacity: 0.5;
+    }
+
+    span.date {
+      font-family: 'Open Sans', 'Noto Sans', 'Roboto', 'Droid Sans', sans-serif;
+      font-size: 0.9em;
+      line-height: 1em;
+      opacity: 0.8;
+    }
+  }
+
+  p {
+    font-family: 'Open Sans', 'Noto Sans', 'Roboto', 'Droid Sans', sans-serif;
+  }
+
+  figure {
+    margin: 2rem 0;
+    position: relative;
+
+    * {
+      margin: 0;
+      max-width: 100%;
+    }
+
+    img {
+      display: inline;
+      transition: transform 250ms ease;
+      vertical-align: middle;
+
+      &:active,
+      &:focus {
+        outline: none;
+        position: relative; // Fixes z-index issues on transform
+        z-index: 1;
+      }
+    }
+
+    &.full-bleed {
+      img {
+        left: 50%;
+        max-width: 100vw;
+        position: relative;
+        transform: translateX(-50%);
+        width: 100vw;
+      }
+    }
+  }
+}

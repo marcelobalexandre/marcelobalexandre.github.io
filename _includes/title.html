@@ -1,0 +1,10 @@
+{% comment %}
+Adds a non-breaking space before the final word in titles to prevent widows.
+{% endcomment %}
+
+{% assign words = include.title | split: " " %}
+{% if words.size > 1  %}
+  {% for word in words %}{% if forloop.last %}&nbsp;{% else %} {% endif %}{{ word }}{% endfor %}
+{% else %}
+  {{ words }}
+{% endif %}

@@ -10,6 +10,8 @@
     .header-container {
       @include grid-column(6);
 
+      margin: 0;
+
       a.footer-heading {
         color: $primary-text-color;
 
